@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} CV Builder</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='stylesheet.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/base-min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/grids-min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/grids-responsive-min.css">
+
+    <style>
+        .title {
+            margin: 5px;
+        }
+
+        .content {
+            margin: 5px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #d64161;
+            font-size: 4em;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('form') }}" style="font-weight: bold">My CV Builder</a>
+    </nav>
+    <hr color="black">
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+
+    <div style="top: 1100px; right: 1200px; position: absolute">
+        <img src="{{url_for('static', filename='stats.png')}}" width="250px">
+    </div>
+
+    <div style="top: 100px; right: 50px; position: fixed">
+        <img src="{{url_for('static', filename='write.png')}}" width="250px">
+    </div>
+
+</body>
+</html>

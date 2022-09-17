@@ -1,0 +1,26 @@
+<div>
+    <div>
+        <h1 style="text-align:center; color:#0096FF">{{user.name}}</h1>
+        <h2 style="text-align:center; font-weight: normal">{{user.email}} | {{user.number}} </h2>
+        <br>
+        <h2>Profile</h2>
+        <hr size="5" color="#0096FF">
+        <h3 style="font-weight: normal">{{user.user_profile}}</h3>
+        <br>
+        <h2>Education</h2>
+        <hr size="5" color="#0096FF">
+        {% for i in user.education %}
+        <h3 style="font-weight: normal">{{ i }}</h3>
+        {% endfor %}
+        <br>
+        <h2>Skills</h2>
+        <hr size="5" color="#0096FF">
+        <h3 style="font-weight: normal">{{user.skills}}</h3>
+        <br>
+        <h2>Experience</h2>
+        <hr size="5" color="#0096FF">
+        {% for i in user.experience %}
+        <h3 style="font-weight: normal">{{ i }}</h3>
+        {% endfor %}
+    </div>
+</div>

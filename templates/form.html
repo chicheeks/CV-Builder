@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="parent">
+    <div class="child">
+    <form  class="pure-form pure-form-stacked" action="{{ url_for('form') }}" method="post">
+    <fieldset>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Your full name" class="pure-input-rounded"/>
+        <br>
+        <label for="number">Phone Number</label>
+        <input type="text" name="number" id="number"
+               placeholder="Your number" class="pure-input-rounded"/>
+        <br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email"
+               placeholder="Your Email" class="pure-input-rounded"/>
+        <br>
+        <label for="profile">Profile</label>
+        <textarea name="profile"
+                  placeholder="Your profile"
+                  rows="10"
+                  cols="50"
+                  class="pure-input-rounded"
+                  ></textarea>
+        <br>
+        <label for="experience">Experience</label>
+        <textarea name="experience"
+                  placeholder="1. Arise Technologies, Assistant Technician [2018 - 2021]
+    - I worked on major projects with technicians."
+                  rows="10"
+                  cols="50"
+                  class="pure-input-rounded"
+                  ></textarea>
+        <span class="pure-form-message">Please number or bullet point each one if more than one.</span>
+        <br>
+        <label for="skills">Skills</label>
+        <textarea name="skills"
+                  placeholder="1. Communication"
+                  rows="10"
+                  cols="50"
+                  class="pure-input-rounded"
+                  ></textarea>
+        <span class="pure-form-message">Please number or bullet point each one if more than one.</span>
+        <br>
+        <label for="education">Education</label>
+        <textarea name="education"
+                  placeholder="1. University of Shine, BEdu. Technical Education [2020 - Present]"
+                  rows="10"
+                  cols="50"
+                  class="pure-input-rounded"
+                  ></textarea>
+        <span class="pure-form-message">Please number or bullet point each one if more than one.</span>
+        <br>
+        <button type="submit" class="pure-button pure-button-primary" style="background-color: #d64161">Build CV</button>
+    </fieldset>
+    </form>
+    </div>
+    </div>
+{% endblock %}
